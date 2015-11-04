@@ -1,0 +1,57 @@
+@charset "utf-8";
+/*公共样式*/
+a,address,b,big,blockquote,body,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,th,td,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var,textarea{margin:0;padding:0}
+body{font:12px/1.5 microsoft yahei;color:#999;min-width: 1200px;}
+img{border:0;outline:none;vertical-align:middle;}
+input,textarea{outline:0;resize:none;}
+blockquote,q{quotes:none;}
+ol,ul{list-style:none;}
+em,i,u,cite{font-style:normal}
+table{border-collapse:collapse;border-spacing:0;}
+button,html input[type=button],input[type=submit]{cursor:pointer}
+a{color:#999;text-decoration:none;}
+.clearfix:after { visibility:hidden; display:block; font-size:0; content:""; clear:both; height:0;}
+.clearfix{ *zoom:1;}
+.clear{ content: '';width: 0;height: 0;clear: both;visibility: hidden}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+/*对齐方式*/
+.Vm{vertical-align: middle;}
+.Vt{vertical-align: top;}
+.Vb{vertical-align: bottom;}
+/*dispaly*/
+.inlineblock{display: inline-block;*zoom:1;}
+.block{display: block;outline: none;}
+.inline{display: inline;}
+.none{display: none;}
+/*visibility*/
+.vsb_hidden{visibility: hidden;}
+.vsb_visible{visibility: visible;}
+/*文本布局*/
+.text_l{text-align: left;}
+.text_m{text-align: center;}
+.text_r{text-align: right;}
+/*文字溢出省略号显示*/
+.spanover{display: inline-block;text-overflow:ellipsis;white-space:nowrap;overflow: hidden;}
+
+/*下滑、贯穿线、无*/
+.linethrough{text-decoration: line-through;}
+.lineunderline{text-decoration: underline;}
+.linenone{text-decoration: none;}
+
+/*iconfonts*/
+@font-face {font-family: "iconfont";
+    src: url('../fonts/iconfont.eot'); /* IE9*/
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
