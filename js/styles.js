@@ -159,18 +159,11 @@ $('.u-valuedetail a').click(function(){
 
 
 /*tab*/
-function tab(title,con){
-    $(title).hover(function(){
-        var Index;
-        Index=$(this).index();
-        $(this).addClass('li:hover').siblings('li').removeClass('li:hover');
-        $(con).eq(Index).show(200).siblings('.u-tabcontent').hide();
-    });
-}
+
 $('.u-tabtitle li').hover(function(){
     var Index;
     Index=$(this).index();
-    $(this).addClass('li:hover').siblings('li').removeClass('li:hover');
+    $(this).addClass('tab_hover').siblings('li').removeClass('tab_hover');
     $('.u-tabcontent').eq(Index).show(200).siblings('.u-tabcontent').hide();
 });
 
@@ -227,7 +220,7 @@ $('.u-mycart.fr,.u-cart').hover(function () {
         $('.u-cart').hide();
     }
 );
-$("input[value='+']").click(function(){
+/*$("input[value='+']").click(function(){
     $(this).next().html(parseInt($(this).next().html())+1);
 });
 $("input[value='-']").click(function(){
@@ -235,6 +228,18 @@ $("input[value='-']").click(function(){
     if($(this).prev('').html()=="0"){
         $(this).closest('li').remove();
     }
+});*/
+$("input[value='+']").click(function(){
+    //$(this).prev('').val(parseInt($(this).prev().val())+1);
+    $(this).closest('div').children("input[type='text']").val(parseInt($(this).closest('div').children("input[type='text']").val())+1);
+});
+$("input[value='-']").click(function(){
+    if($(this).closest('div').children("input[type='text']").val()=='1'){
+        return
+    }else{
+        $(this).closest('div').children("input[type='text']").val(parseInt($(this).closest('div').children("input[type='text']").val())-1);
+    }
+
 });
 
 /*点击空白处隐藏*/
@@ -262,20 +267,12 @@ $('.u-type li').click(function(){
 $('.total li').click(function(){
     var Index2;
     Index2=$(this).index();
-    $(this).addClass('hover').siblings('li').removeClass('hover');
+    $(this).find('a').addClass('hover');
+    $(this).siblings('li').find('a').removeClass('hover');
     $('.u-content2').eq(Index2).show().siblings('.u-content2').hide();
 });
-$("input[value='+']").click(function(){
-    $(this).prev('').val(parseInt($(this).prev().val())+1);
-});
-$("input[value='-']").click(function(){
-    if($(this).next().val()=='1'){
-        return
-    }else{
-        $(this).next().val(parseInt($(this).next().val())-1);
-    }
 
-});
+
 $('.u-addr').hover(function(){
     $(this).next().next().show();
 });
@@ -325,3 +322,21 @@ $(".cart-title>.allchoose>input[type='checkbox'],.m-carttoolbar>.choose>input[ty
 $('.cart-con>.handle>a').click(function(){
     $(this).closest('.cart-con').remove();
 });
+
+
+$('.sort>div').click(function(){
+    /*$(this).css('background-color','#e74649');
+    $(this).css('color','#fff');*/
+    $(this).addClass('hover2');
+    $(this).siblings('div').removeClass('hover2');
+});
+
+$('.con>ul>li').toggle(
+    function(){
+    $(this).addClass('con_hover');
+    },
+    function(){
+        $(this).removeClass('con_hover');
+    }
+)
+
