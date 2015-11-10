@@ -29,7 +29,7 @@
 .u-cart ul{}
 .u-cart li{}
 .u-cart li input[type=text]{  border: 0;  width: 15px;  height: 30px;  line-height: 30px;  text-align: center;  }
-.u-cart li input[type=button]{background-color: #d4d9de;border: 0px;margin: 0px 2px;}
+.u-cart li input[type=button]{background-color: #d4d9de;border: 0px;margin: 0px 2px;width: 15px;  text-align:center;}
 .u-cart li span{margin: 0px 5px;width: 90px;}
 .u-cart input[type=button]{background-color: #e74649;border: 0px;height: 30px;color: #fff;border-radius: 3px;-webkit-border-radius:3px;-moz-border-radius:3px;}
 .u-cart .pic{height: 30px;width: 30px;margin: 0px 5px;}
